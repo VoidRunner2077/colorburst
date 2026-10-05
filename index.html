@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="colorburst — генератор цветовых палитр и гармоний">
+  <title>colorburst — генератор цветовых палитр</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html"><span class="logo-mark">c</span>colorburst.nikonenko.com</a>
+  <div class="pet-badge">PET-PROJECT · НЕКОММЕРЧЕСКИЙ ПРОДУКТ</div>
+  <nav>
+    <a href="palette.html">Палитры</a>
+  </nav>
+</header>
+
+<main class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <p class="eyebrow">color · harmony · inspiration</p>
+    <h1>Цвета,<br><span>которые говорят за вас.</span></h1>
+    <p class="hero-text">colorburst создаёт гармоничные палитры — быстро, без регистрации и прямо в браузере. Идеально для дизайнеров, разработчиков и художников.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="palette.html">Создать палитру <span>→</span></a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="mini-card">
+      <div class="mini-top"><span class="dot green"></span><span>colorburst generator</span></div>
+      <div class="palette-strip" id="livePalette">
+        <span style="background:#7c3aed"></span>
+        <span style="background:#ec4899"></span>
+        <span style="background:#f59e0b"></span>
+        <span style="background:#10b981"></span>
+        <span style="background:#06b6d4"></span>
+      </div>
+      <div class="hex-row" id="liveHexes">
+        <span>#7C3AED</span><span>#EC4899</span><span>#F59E0B</span><span>#10B981</span><span>#06B6D4</span>
+      </div>
+      <small id="liveMeta">Гармония: analogous · 5 цветов</small>
+      <div class="live-status"><span class="live-dot"></span><span>генератор работает</span><b id="liveStatus">создаём палитру…</b></div>
+    </div>
+  </div>
+</main>
+
+<section class="features">
+  <article><div class="feature-icon">01</div><h2>Без регистрации</h2><p>Генерация работает локально в вашем браузере. Ничего не нужно создавать или отправлять на сервер.</p></article>
+  <article><div class="feature-icon">02</div><h2>Свои параметры</h2><p>Выбирайте тип гармонии, количество цветов, яркость и насыщенность.</p></article>
+  <article><div class="feature-icon">03</div><h2>Экспорт в один клик</h2><p>Копируйте HEX, RGB, HSL или скачивайте палитру в CSS, SCSS и JSON.</p></article>
+</section>
+
+<section class="history-card">
+  <div class="history-icon">⌛</div>
+  <div class="history-body">
+    <p class="eyebrow">исторический факт</p>
+    <p id="historyFact">Первый в мире синтетический краситель — мовеин — случайно получил Уильям Перкин в 1856 году, пытаясь синтезировать хинин. Так началась эпоха анилиновых красок.</p>
+  </div>
+</section>
+
+<footer><span>colorburst.nikonenko.com</span><span>PET-PROJECT · НЕКОММЕРЧЕСКИЙ ПРОДУКТ</span></footer>
+<script src="js/home.js"></script>
+</body>
+</html>

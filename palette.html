@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Генератор цветовых палитр colorburst">
+  <title>Генератор палитр — colorburst</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html"><span class="logo-mark">c</span>colorburst.nikonenko.com</a>
+  <div class="pet-badge">PET-PROJECT · НЕКОММЕРЧЕСКИЙ ПРОДУКТ</div>
+  <nav>
+    <a href="palette.html" class="active">Палитры</a>
+  </nav>
+</header>
+
+<main class="tool-page">
+  <div class="page-heading">
+    <h1>Создайте<br><span>свою палитру.</span></h1>
+    <p>Настройте параметры и получите гармоничные сочетания цветов. Кликните по цвету, чтобы скопировать HEX.</p>
+  </div>
+
+  <div class="generator-grid">
+    <section class="panel">
+      <div class="panel-label">результат</div>
+      <div class="palette-result" id="paletteResult"></div>
+      <div class="result-meta">
+        <span id="paletteMeta">analogous · 5 цветов</span>
+        <span>нажмите на цвет — копирует</span>
+      </div>
+      <button class="btn btn-primary full" id="generateBtn">Сгенерировать <span>↻</span></button>
+      <button class="ghost-button" id="randomBtn">Случайная гармония</button>
+      <div class="export-row">
+        <button class="export-btn" data-format="hex">HEX</button>
+        <button class="export-btn" data-format="rgb">RGB</button>
+        <button class="export-btn" data-format="hsl">HSL</button>
+        <button class="export-btn" data-format="css">CSS</button>
+        <button class="export-btn" data-format="scss">SCSS</button>
+        <button class="export-btn" data-format="json">JSON</button>
+      </div>
+    </section>
+
+    <section class="panel options">
+      <div class="panel-label">параметры</div>
+
+      <label class="field">
+        <span>Тип гармонии</span>
+        <select id="harmony">
+          <option value="analogous">Analogous (соседние)</option>
+          <option value="complementary">Complementary (контраст)</option>
+          <option value="triadic">Triadic (триада)</option>
+          <option value="tetradic">Tetradic (четыре)</option>
+          <option value="split">Split-Complementary</option>
+          <option value="monochromatic">Monochromatic (один тон)</option>
+        </select>
+      </label>
+
+      <div class="range-label"><span>Количество цветов</span><strong id="countValue">5</strong></div>
+      <input type="range" id="count" min="3" max="8" value="5">
+
+      <div class="range-label"><span>Яркость</span><strong id="lightValue">55%</strong></div>
+      <input type="range" id="light" min="20" max="85" value="55">
+
+      <div class="range-label"><span>Насыщенность</span><strong id="satValue">70%</strong></div>
+      <input type="range" id="sat" min="20" max="100" value="70">
+
+      <div class="switch-row">
+        <div>Тёмная основа<small>палитра строится вокруг тёмного фона</small></div>
+        <label><input type="checkbox" id="darkMode"><i></i></label>
+      </div>
+
+      <div class="switch-row">
+        <div>Мягкие переходы<small>плавные оттенки между цветами</small></div>
+        <label><input type="checkbox" id="soft" checked><i></i></label>
+      </div>
+    </section>
+  </div>
+
+  <section class="info-card">
+    <h2>Как это работает?</h2>
+    <div class="info-copy">
+      <p>Палитра строится на <strong>цветовом круге HSL</strong>. Вы выбираете базовый оттенок случайно, а затем алгоритм рассчитывает остальные цвета по правилам выбранной гармонии.</p>
+      <p><strong>Analogous</strong> — соседние оттенки, мягкие сочетания. <strong>Complementary</strong> — противоположные, максимальный контраст. <strong>Triadic</strong> — три равноудалённых цвета. <strong>Tetradic</strong> — четыре цвета, богатая палитра.</p>
+      <p>Все вычисления происходят локально — никакие данные не отправляются на сервер.</p>
+    </div>
+  </section>
+
+  <section class="history-card">
+    <div class="history-icon">⌛</div>
+    <div class="history-body">
+      <p class="eyebrow">исторический факт</p>
+      <p id="historyFact">В Древнем Египте синий пигмент получали, нагревая песок, медную руду и известь до 850 °C. Этот «египетский синий» оставался самым ярким синим в мире почти 3000 лет.</p>
+    </div>
+  </section>
+</main>
+
+<footer><span>colorburst.nikonenko.com</span><span>PET-PROJECT · НЕКОММЕРЧЕСКИЙ ПРОДУКТ</span></footer>
+<script src="js/palette.js"></script>
+</body>
+</html>
