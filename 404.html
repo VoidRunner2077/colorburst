@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="colorburst — страница не найдена">
+  <meta name="robots" content="noindex">
+  <title>404 — страница не найдена · colorburst</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html"><span class="logo-mark">c</span>colorburst.nikonenko.com</a>
+  <div class="pet-badge">PET-PROJECT · НЕКОММЕРЧЕСКИЙ ПРОДУКТ</div>
+  <nav>
+    <a href="palette.html">Палитры</a>
+  </nav>
+</header>
+
+<main class="notfound">
+  <div class="notfound-glow"></div>
+
+  <div class="notfound-content">
+    <p class="eyebrow">error · 404</p>
+    <h1>Такого<br><span>цвета нет в палитре.</span></h1>
+    <p class="hero-text">Страница, которую вы искали, либо переехала, либо никогда не существовала. Возможно, ссылка рассыпалась на пиксели — как иногда бывает с HEX-кодами.</p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="index.html">На главную <span>→</span></a>
+      <a class="btn btn-secondary" href="palette.html">Создать палитру</a>
+    </div>
+  </div>
+
+  <div class="notfound-digits" aria-hidden="true">
+    <span class="digit d1">4</span>
+    <span class="digit d2">0</span>
+    <span class="digit d3">4</span>
+  </div>
+</main>
+
+<footer><span>colorburst.nikonenko.com</span><span>PET-PROJECT · НЕКОММЕРЧЕСКИЙ ПРОДУКТ</span></footer>
+
+<script>
+  // случайный сдвиг волны у цифр при каждом заходе
+  document.querySelectorAll('.notfound-digits .digit').forEach(el => {
+    const offset = (Math.random() * 4 - 2).toFixed(2);
+    el.style.animationDelay = offset + 's, ' + offset + 's';
+  });
+</script>
+</body>
+</html>
